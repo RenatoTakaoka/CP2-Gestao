@@ -1,0 +1,46 @@
+void main() {
+  
+  
+  void enviarEmail({required String remetente, String? dest, String? titulo, String msg = 'sem mensagem'}) {
+    
+    print(remetente);
+    print(dest);
+    print(titulo);
+    print(msg);
+  }
+  
+  enviarEmail(remetente: 'email@email.com', dest: 'email12@gmail.com', titulo: 'Hello World!', msg: 'Seja bem vindo') ;
+}
+
+
+void main() {
+  
+  int receba(List<int>? lista, {required int x}) {
+    
+    var n = 0;
+    if (lista == null || lista.isEmpty) {
+      return 0;
+    }
+    for (final valor in lista) {
+        if (valor == x) {
+          n = n+1;
+        }
+    } 
+    return n;
+  }
+  
+  List<int> lista = [1,2,2,2,3];
+  
+  print(receba(lista, x: 2));
+  
+}
+
+void main() {
+
+	int contador(List<int>? lista, {required int x}) {
+		return lista?.where((1) => == x).length ?? 0;
+	}
+
+	//0
+	print(contador(null, x:2));
+}
